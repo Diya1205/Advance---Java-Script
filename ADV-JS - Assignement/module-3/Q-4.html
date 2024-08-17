@@ -1,0 +1,46 @@
+<!-- Create a form and validate using JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return main()">
+    FIRST NAME <input type="text" id="fn">
+    <br>
+    LAST NAMME <input type="text" id="ln">
+    <br>
+    E-MAIL <input type="email" id="em">
+    <br>
+    PASSWORD <input type="text" id="pw">
+    <br>
+    <input type="submit" name="" id="">
+    </form>
+
+    <h1 id="demo"></h1>
+    <script>
+        function main(){
+            let a = document.getElementById("fn").value;
+
+            let b = document.getElementById("ln").value;
+
+            let c = document.getElementById("em").value;
+
+            let d = document.getElementById("pw").value;
+
+            if(a && b && c && d){
+                document.getElementById("demo").innerHTML = "SUBMITED";
+                return false;
+
+            }
+            else{
+                document.getElementById("demo").innerHTML = "NOT SUBMITED";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 3.	Write a program of promises and handle that promises also -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = new Promise(function(res,error){
+            let x = 10
+            if(x!=10){
+                res("this success")
+            }
+            else{
+                error("this reject")
+            }
+        })
+        .then(
+            // result
+            function(res){
+                output(res)
+            },
+            // error
+            function(res){
+                output(res)
+            }
+        )
+
+        function output(res){
+            console.log(res)
+        }
+    </script>
+
+</body>
+</html>
